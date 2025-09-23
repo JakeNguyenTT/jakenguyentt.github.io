@@ -45,13 +45,6 @@
       transform: scale(1.1);
     }
   </style>
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -120,8 +113,9 @@
         <p>
           <span data-lang="en">I'm</span>
           <span data-lang="vi" style="display:none;">Tôi là</span>
-          <span class="typed" data-typed-items="Game Developer, XR Developer, Freelancer, Untiy Developer">Game
-            Developer</span>
+          <span class="typed"
+            data-typed-items="Software Engineer, Game Developer, XR Developer, Unity Developer">Software
+            Engineer</span>
           <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
         </p>
       </div>
@@ -136,11 +130,11 @@
         <h2 data-lang="en">About Me</h2>
         <h2 data-lang="vi" style="display:none;">Giới thiệu bản thân</h2>
         <p data-lang="en">
-          I have 3 years of experience with Unity, specializing in making VR/AR/XR
+          I have 3 years of experience making software and games using C# and Unity, specializing in making VR/AR/XR
           applications. <br>In addition, I also built small-scale games in my free time.
         </p>
         <p data-lang="vi" style="display:none;">
-          Tôi có 3 năm kinh nghiệm với Unity, chuyên về việc tạo ứng dụng VR/AR/XR.
+          Tôi có 3 năm kinh nghiệm làm phần mềm và game bằng C# và Unity, chuyên về việc tạo ứng dụng VR/AR/XR.
           <br>Ngoài ra, tôi còn xây dựng các game mini trong thời gian rảnh.
         </p>
       </div><!-- End Section Title -->
@@ -276,133 +270,13 @@
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-game2d">Game 2D</li>
-            <li data-filter=".filter-game3d">Game 3D</li>
-            <li data-filter=".filter-xr">VR/XR</li>
-          </ul>
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100" id="portfolio-filters">
+            <!-- Filters will be inserted here -->
+          </ul><!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-game2d">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/Akooland.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Akooland</h4>
-                  <p>Color Game for Kids</p>
-                  <a href="assets/img/portfolio/Akooland.png" title="Akooland" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vr">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/PCCC.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>PCCC</h4>
-                  <p>3D VR Simulator Game on Meta Quest 3 for Fire Safety Training</p>
-                  <a href="assets/img/portfolio/PCCC.png" title="PCCC" data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-game2d">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/LostCat.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Lost Cat</h4>
-                  <p>2D Platformer Game likes Mario</p>
-                  <a href="assets/img/portfolio/LostCat.png" title="Lost Cat" data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-game2d">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/Hexinfinity.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Hexinfinity</h4>
-                  <p>Puzzle Game merge tiles with same color to get points</p>
-                  <a href="assets/img/portfolio/Hexinfinity.png" title="Hexinfinity"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-game2d">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/DefeatDengue.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>DefeatDengue</h4>
-                  <p>Tower defense games designed to teach people how to guard against mosquitoes.</p>
-                  <a href="assets/img/portfolio/DefeatDengue.png" title="DefeatDengue"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-xr">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/AnatomyMR.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>AnatomyMR</h4>
-                  <p>Examine human body and skull structures</p>
-                  <a href="assets/img/portfolio/AnatomyMR.png" title="AnatomyMR"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-xr">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/insightScanX.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>InsightScanX</h4>
-                  <p>Scans real 3D objects and exports 3D models</p>
-                  <a href="assets/img/portfolio/insightScanX.png" title="InsightScanX"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-xr">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/VIBNewYear.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>VIBNewYear</h4>
-                  <p>3D AR WebGL app for new year events</p>
-                  <a href="assets/img/portfolio/VIBNewYear.png" title="VIBNewYear"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200" id="portfolio-container">
+            <!-- Portfolio items will be inserted here -->
+          </div><!-- End Portfolio Container -->
 
         </div>
 
@@ -692,21 +566,136 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
   <script>
+    const portfolioItems = [
+      {
+        category: "game2d",
+        title: "Akooland",
+        img: "assets/img/portfolio/Akooland.png",
+        description: "Color Game for Kids",
+        description_vi: "Trò chơi tô màu cho trẻ em",
+        links: [
+          { label: "Android", url: "https://play.google.com/store/apps/details?id=com.thienlong.arcolor&;hl=en&gl=US", icon: "bi-android" },
+          { label: "iOS", url: "https://apps.apple.com/ca/app/akooland/id6450509106", icon: "bi-apple" },
+        ]
+      },
+      {
+        category: "game2d",
+        title: "Lost Cat",
+        img: "assets/img/portfolio/LostCat.png",
+        description: "2D Platformer Game likes Mario",
+        description_vi: "Trò chơi platformer 2D",
+        links: [
+          { label: "Demo", url: "https://jakenguyentt.github.io/LostCat_Demo/", icon: "bi-laptop" },
+        ]
+      },
+      {
+        category: "VR",
+        title: "PCCC VR",
+        img: "assets/img/portfolio/PCCC.png",
+        description: "VR Simulator Game for Fire Safety Training on Meta Quest 3",
+        description_vi: "VR mô phỏng cho đào tạo phòng cháy chữa cháy trên Meta Quest 3",
+        links: [
+          { label: "Video", url: "https://www.youtube.com/watch?v=U5Xe9KLbGOI", icon: "bi-youtube" }
+        ]
+      },
+      {
+        category: "MR",
+        title: "Anatomy MR",
+        img: "assets/img/portfolio/AnatomyMR.png",
+        description: "App to examine human body and skull structures on Hololens 2",
+        description_vi: "Ứng dụng để kiểm tra cấu trúc cơ thể và xương sọ trên Hololens 2",
+        links: [
+          { label: "Video", url: "https://www.youtube.com/watch?v=aXELG-q-zRc", icon: "bi-youtube" }
+        ]
+      },
+      {
+        category: "AR",
+        title: "VIBNewYear",
+        img: "assets/img/portfolio/VIBNewYear.png",
+        description: "3D AR WebGL app for new year events",
+        description_vi: "Ứng dụng AR WebGL 3D cho sự kiện mới năm",
+        links: [
+          { label: "Video", url: "https://www.youtube.com/watch?v=4Bow2QwC_pQ", icon: "bi-youtube" }
+        ]
+      },
+      {
+        category: "AR",
+        title: "InsightScanX",
+        img: "assets/img/portfolio/InsightScanX.png",
+        description: "Scans real 3D objects and exports 3D models",
+        description_vi: "Quét đối tượng 3D thực tế và xuất ra mô hình 3D",
+        links: [
+          { label: "Video", url: "https://www.youtube.com/watch?v=AbNXsz7axj4", icon: "bi-youtube" }
+        ]
+      },
+      {
+        category: "game2d",
+        title: "Hexinfinity",
+        img: "assets/img/portfolio/Hexinfinity.png",
+        description: "Puzzle Game merge tiles with same color to get points",
+        description_vi: "Trò chơi giải đố nối các ô có cùng màu để nhận điểm",
+        links: [
+          { label: "Demo", url: "https://jakenguyentt.github.io/Hexinfinity_Demo/", icon: "bi-laptop" },
+        ]
+      },
+      {
+        category: "game2d",
+        title: "DefeatDengue",
+        img: "assets/img/portfolio/DefeatDengue.png",
+        description: "Tower defense games designed to teach people how to guard against mosquitoes.",
+        description_vi: "Trò chơi phòng thủ thiết kế để dạy người ta cách bảo vệ chống lại muỗi.",
+        links: [
+          { label: "Demo", url: "https://www.defeatdengue.vn/", icon: "bi-laptop" },
+        ]
+      }
+    ];
+    const container = document.getElementById("portfolio-container");
+    const filterContainer = document.getElementById("portfolio-filters");
+
+    // 1. Generate portfolio items
+    portfolioItems.forEach(item => {
+      const div = document.createElement("div");
+      div.className = `col-lg-4 col-md-6 portfolio-item isotope-item filter-${item.category}`;
+
+      // generate link list dynamically
+      const linksHtml = item.links && item.links.length > 0
+        ? `<div class="portfolio-item-links">
+         <ul>
+           ${item.links
+          .filter(l => l.url && l.url.trim() !== "") // skip empty
+          .map(l => `
+               <li>
+                 <a href="${l.url}" target="_blank" class="details-link">
+                   ${l.icon ? `<i class="bi ${l.icon}"></i>` : ""} ${l.label}
+                 </a>
+               </li>
+             `).join("")}
+         </ul>
+       </div>`
+        : "";
+
+      div.innerHTML = `
+        <div class="portfolio-content">
+          <img src="${item.img}" class="img-fluid" alt="">
+          
+          <div class="portfolio-item-text">
+            <h4>${item.title}</h4>
+            <p data-lang="en">${item.description}</p>
+            <p data-lang="vi" style="display:none;">${item.description_vi}</p>
+            ${linksHtml}
+          </div>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+
+    // 2. Generate filters from categories
+    const categories = [...new Set(portfolioItems.map(i => i.category))];
+    filterContainer.innerHTML = `
+      <li data-filter="*" class="filter-active">All</li>
+      ${categories.map(c => `<li data-filter=".filter-${c}">${c.charAt(0).toUpperCase() + c.slice(1)}</li>`).join("")}`;
+
     function setLanguage(lang, el) {
       // Hide all language text
       document.querySelectorAll('[data-lang]').forEach(elm => {
@@ -731,6 +720,22 @@
       setLanguage(savedLang, btn);
     }
   </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
