@@ -73,7 +73,7 @@ window.CONTENT = {
   // icon: "github" | "linkedin" | "email" | "itch"
   links: [
     { label: "Email", url: "mailto:jake.nguyentt@gmail.com", icon: "email" },
-    { label: "GitHub", url: "https://github.com/SeverusJake", icon: "github" },
+    { label: "GitHub", url: "https://github.com/JakeNguyenTT", icon: "github" },
     { label: "LinkedIn", url: "https://www.linkedin.com/", icon: "linkedin" }, // PLACEHOLDER
   ],
 
@@ -192,7 +192,7 @@ window.CONTENT = {
         vi: "Game bắn súng góc nhìn từ trên xuống với cơ chế roguelike và AI zombie.",
       },
       tags: ["Top-down camera", "Roguelike", "Enemy AI"],
-      links: {}, // TODO: add demo link (the one provided pointed to Lost Cat)
+      links: { repo: "https://github.com/JakeNguyenTT/ZombieSurvivalGame" },
     },
     {
       title: "What The Pho Canberra",
