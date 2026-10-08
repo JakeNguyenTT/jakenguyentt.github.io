@@ -39,7 +39,7 @@ window.CONTENT = {
       en: "Life is a journey, and the journey is the destination.",
       vi: "Cuộc sống là một hành trình, và hành trình là điểm đến.",
     },
-    // Shown beside the bio. label/value accept { en, vi }.
+    // Shown under the bio. label/value accept { en, vi }; value can be a list (one per line).
     facts: [
       { label: { en: "Based in", vi: "Nơi ở" }, value: { en: "Ho Chi Minh City, Vietnam", vi: "TP. Hồ Chí Minh, Việt Nam" } },
       {
@@ -48,10 +48,10 @@ window.CONTENT = {
       },
       {
         label: { en: "Education", vi: "Học vấn" },
-        value: {
-          en: "Software Engineering Diploma (ADSE), FPT Aptech · Bachelor of Accounting, University of Economics HCMC",
-          vi: "Bằng Kỹ sư phần mềm (ADSE), FPT Aptech · Cử nhân Kế toán, Đại học Kinh tế TP.HCM",
-        },
+        value: [
+          { en: "Software Engineering Diploma (ADSE), FPT Aptech", vi: "Bằng Kỹ sư phần mềm (ADSE), FPT Aptech" },
+          { en: "Bachelor of Accounting, University of Economics HCMC", vi: "Cử nhân Kế toán, Đại học Kinh tế TP.HCM" },
+        ],
       },
       {
         label: { en: "Languages", vi: "Ngôn ngữ" },
@@ -221,12 +221,13 @@ window.CONTENT = {
     {
       title: { en: "This Portfolio", vi: "Portfolio này" },
       category: "web",
+      image: "assets/img/portfolio.jpg",
       blurb: {
         en: "Bilingual, light/dark themed portfolio in plain HTML, CSS, and JavaScript. No build step, deployed on GitHub Pages.",
         vi: "Portfolio song ngữ, giao diện sáng/tối, viết bằng HTML, CSS và JavaScript thuần. Không cần build, triển khai trên GitHub Pages.",
       },
       tags: ["HTML", "CSS", "JavaScript", "i18n"],
-      links: { repo: "https://github.com/SeverusJake/SeverusJake.github.io" },
+      links: { repo: "https://github.com/JakeNguyenTT/jakenguyentt.github.io" },
     },
   ],
 

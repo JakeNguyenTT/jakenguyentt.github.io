@@ -28,8 +28,8 @@
   --btn-2: #2563eb;
   --btn-glow: rgba(37, 99, 235, 0.3);
   --btn-glow-strong: rgba(37, 99, 235, 0.42);
-  /* Mostly blue, short blend into amber at the end (avoids a muddy grey middle) */
-  --text-gradient: linear-gradient(90deg, #1d4ed8 0%, #2563eb 58%, #f59e0b 88%, #d97706 100%);
+  /* Blue into amber; brighter mid-stops keep the blend from going muddy grey */
+  --text-gradient: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 35%, #f59e0b 75%, #d97706 100%);
   --ring-gradient: conic-gradient(from 210deg, #1d4ed8, #2563eb, #f59e0b, #d97706, #1d4ed8);
   --radius: 18px;
   --radius-sm: 10px;
@@ -537,7 +537,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: clamp(2.4rem, 7vw, 4.75rem);
   font-weight: 700;
   max-width: 14ch;
+}
+
+/* Each wrapped line gets the full blue→amber gradient, not a slice of it */
+.hero-name .gradient-text {
   padding-bottom: 0.08em; /* keep descenders inside the clipped gradient */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .hero-role {
@@ -708,13 +714,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Skills ------------------------------------------------------------------ */
+/* Masonry columns: panels keep their natural height, so short lists don't leave gaps */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-  gap: 24px;
+  columns: 3 300px;
+  column-gap: 24px;
 }
 
-.skill-panel { padding: 26px; }
+.skill-panel {
+  padding: 26px;
+  margin-bottom: 24px;
+  break-inside: avoid;
+}
 
 .skill-panel h3 {
   display: flex;
@@ -808,6 +818,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .about-side { display: grid; gap: 24px; align-content: start; justify-items: center; }
+.about-body:only-child { grid-column: 1 / -1; }
 
 .about-photo {
   width: 220px;
@@ -818,7 +829,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   box-shadow: 0 0 0 3px var(--accent), var(--shadow-hover);
 }
 
-.facts { margin: 0; display: grid; gap: 14px; width: 100%; }
+.facts {
+  margin: 28px 0 0;
+  border-top: 1px solid var(--border);
+}
+.fact {
+  display: grid;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+@media (min-width: 600px) {
+  .fact { grid-template-columns: 130px 1fr; gap: 16px; align-items: baseline; }
+}
 .fact dt {
   font-size: 0.75rem;
   font-weight: 600;
@@ -826,7 +849,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   text-transform: uppercase;
   color: var(--accent-warm);
 }
-.fact dd { margin: 2px 0 0; font-weight: 500; }
+.fact dd { margin: 0; font-weight: 500; }
+.fact-line { display: block; }
+.fact-line + .fact-line { margin-top: 6px; }
 
 .about-body p { font-size: 1.05rem; color: var(--text-muted); }
 .about-body p + p { margin-top: 16px; }

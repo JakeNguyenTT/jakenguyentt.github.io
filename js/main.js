@@ -323,27 +323,29 @@
     var facts = profile.facts || [];
     box.textContent = "";
 
-    if (profile.photo || facts.length) {
+    if (profile.photo) {
       box.appendChild(el("div", { class: "about-side" }, [
-        profile.photo
-          ? el("img", { class: "about-photo", src: profile.photo, alt: profile.name, width: "220", height: "220", loading: "lazy" })
-          : null,
-        facts.length
-          ? el("dl", { class: "facts" }, facts.map(function (fact) {
-              return el("div", { class: "fact" }, [
-                el("dt", { text: tr(fact.label) }),
-                el("dd", { text: tr(fact.value) }),
-              ]);
-            }))
-          : null,
+        el("img", { class: "about-photo", src: profile.photo, alt: profile.name, width: "220", height: "220", loading: "lazy" }),
       ]));
     }
 
-    var paragraphs = profile.about.map(function (paragraph) {
+    var body = profile.about.map(function (paragraph) {
       return el("p", { text: tr(paragraph) });
     });
-    if (profile.motto) paragraphs.push(el("blockquote", { class: "motto", text: tr(profile.motto) }));
-    box.appendChild(el("div", { class: "about-body" }, paragraphs));
+    // Facts sit in the wide column so each value (e.g. one degree) fits on one line.
+    if (facts.length) {
+      body.push(el("dl", { class: "facts" }, facts.map(function (fact) {
+        var values = Array.isArray(fact.value) ? fact.value : [fact.value];
+        return el("div", { class: "fact" }, [
+          el("dt", { text: tr(fact.label) }),
+          el("dd", null, values.map(function (value) {
+            return el("span", { class: "fact-line", text: tr(value) });
+          })),
+        ]);
+      })));
+    }
+    if (profile.motto) body.push(el("blockquote", { class: "motto", text: tr(profile.motto) }));
+    box.appendChild(el("div", { class: "about-body" }, body));
   }
 
   function renderContact(profile, links) {
