@@ -19,6 +19,8 @@ window.CONTENT = {
       vi: "Tôi xây dựng game và website mang lại trải nghiệm tốt — và nhờ nhiều năm làm hỗ trợ IT, tôi biết cách giữ chúng vận hành ổn định khi người dùng thật sử dụng.",
     },
     photo: "assets/img/profile.jpg",
+    // Up to 3 short labels floating around the hero photo.
+    heroTags: ["Unity", "AR / VR", "Web"],
     about: [
       {
         en: "I'm a developer with experience across several technical fields: 3 years building VR, AR, and MR applications in Unity and C#, full-stack web development with Astro and Next.js, and 3 years in IT support and helpdesk — plus hands-on computer vision work with YOLO.",

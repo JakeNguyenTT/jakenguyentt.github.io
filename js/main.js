@@ -144,6 +144,18 @@
     byId("hero-tagline").textContent = tr(profile.tagline);
     byId("cv-link").setAttribute("href", profile.resumeUrl);
     byId("logo-text").textContent = profile.shortName;
+
+    var orb = byId("hero-orb");
+    orb.hidden = !profile.photo;
+    if (!profile.photo) return;
+    byId("hero-photo").setAttribute("src", profile.photo);
+    byId("hero-photo").setAttribute("alt", profile.name);
+
+    var tags = byId("hero-tags");
+    tags.textContent = "";
+    (profile.heroTags || []).slice(0, 3).forEach(function (tag) {
+      tags.appendChild(el("li", { class: "hero-orb-tag", text: tr(tag) }));
+    });
   }
 
   function renderStats(projects) {

@@ -30,6 +30,7 @@
   --btn-glow-strong: rgba(37, 99, 235, 0.42);
   /* Mostly blue, short blend into amber at the end (avoids a muddy grey middle) */
   --text-gradient: linear-gradient(90deg, #1d4ed8 0%, #2563eb 58%, #f59e0b 88%, #d97706 100%);
+  --ring-gradient: conic-gradient(from 210deg, #1d4ed8, #2563eb, #f59e0b, #d97706, #1d4ed8);
   --radius: 18px;
   --radius-sm: 10px;
   --font-head: "Space Grotesk", system-ui, sans-serif;
@@ -66,6 +67,7 @@
   --btn-glow: rgba(124, 58, 237, 0.3);
   --btn-glow-strong: rgba(124, 58, 237, 0.4);
   --text-gradient: linear-gradient(90deg, var(--accent), var(--accent-2));
+  --ring-gradient: conic-gradient(from 210deg, #a78bfa, #7c3aed, #22d3ee, #0891b2, #a78bfa);
 
   color-scheme: dark;
 }
@@ -437,7 +439,91 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   display: flex;
   align-items: center;
   padding-block: 72px;
+  overflow-x: clip; /* floating photo tags never cause sideways scroll */
 }
+
+.hero-inner {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero-inner { grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr); gap: 48px; }
+}
+
+/* Photo in a slowly rotating gradient ring, with floating tags */
+.hero-orb {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+}
+.hero-orb[hidden] { display: none; }
+
+@media (max-width: 899px) {
+  .hero-orb { order: -1; width: 210px; }
+}
+
+.hero-orb-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--ring-gradient);
+  animation: orb-spin 14s linear infinite;
+}
+.hero-orb-ring::after {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px dashed var(--border);
+}
+
+.hero-orb-photo {
+  position: absolute;
+  inset: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50%;
+  border: 6px solid var(--bg);
+  object-fit: cover;
+  object-position: 50% 28%;
+}
+
+.hero-orb-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-orb-tag {
+  position: absolute;
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--chip-text);
+  background: var(--glass);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: orb-bob 4s ease-in-out infinite;
+}
+.hero-orb-tag:nth-child(1) { top: 4%; left: -6%; }
+.hero-orb-tag:nth-child(2) { top: 44%; right: -14%; animation-delay: -1.3s; }
+.hero-orb-tag:nth-child(3) { bottom: 2%; left: 6%; animation-delay: -2.6s; }
+
+@media (max-width: 899px) {
+  .hero-orb-tag:nth-child(1) { left: -20%; }
+  .hero-orb-tag:nth-child(2) { right: -30%; }
+}
+
+@keyframes orb-spin { to { transform: rotate(360deg); } }
+@keyframes orb-bob { 50% { transform: translateY(-8px); } }
 
 .eyebrow {
   font-family: var(--font-head);
