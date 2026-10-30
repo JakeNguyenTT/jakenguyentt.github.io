@@ -36,7 +36,7 @@
   };
 
   // Key order is the chip order and the link-button order. Labels live in CONTENT.ui.
-  var CATEGORIES = ["all", "xr", "game", "web"];
+  var CATEGORIES = ["all", "web", "xr", "game"];
   var LINK_KEYS = ["demo", "android", "ios", "video", "live", "repo"];
 
   var root = document.documentElement;
@@ -164,7 +164,7 @@
     projects.forEach(function (p) { counts[p.category] = (counts[p.category] || 0) + 1; });
 
     box.textContent = "";
-    ["total", "xr", "game", "web"].forEach(function (key) {
+    ["total", "web", "xr", "game"].forEach(function (key) {
       if (!counts[key]) return;
       box.appendChild(el("div", { class: "stat" }, [
         el("dt", { text: ui("stats." + key) }),

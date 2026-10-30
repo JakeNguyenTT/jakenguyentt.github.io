@@ -13,26 +13,26 @@ window.CONTENT = {
   profile: {
     name: "Nguyen The Thien Phuc",
     shortName: "Phuc",
-    role: { en: "Unity & Web Developer", vi: "Lập trình viên Unity & Web" },
+    role: { en: "Software Developer · Web Applications", vi: "Lập trình viên phần mềm · Ứng dụng Web" },
     tagline: {
-      en: "I build games and websites that feel good to use — and, thanks to years in IT support, I know how to keep them running when real users show up.",
-      vi: "Tôi xây dựng game và website mang lại trải nghiệm tốt — và nhờ nhiều năm làm hỗ trợ IT, tôi biết cách giữ chúng vận hành ổn định khi người dùng thật sử dụng.",
+      en: "I build websites and applications that feel good to use — and, thanks to years in IT support, I know how to keep them running when real users show up.",
+      vi: "Tôi xây dựng website và ứng dụng mang lại trải nghiệm tốt — và nhờ nhiều năm làm hỗ trợ IT, tôi biết cách giữ chúng vận hành ổn định khi người dùng thật sử dụng.",
     },
     photo: "assets/img/profile.jpg",
     // Up to 3 short labels floating around the hero photo.
-    heroTags: ["Unity", "AR / VR", "Web"],
+    heroTags: ["Web", "C#", "Unity"],
     about: [
       {
-        en: "I'm a developer with experience across several technical fields: 3 years building VR, AR, and MR applications in Unity and C#, full-stack web development with Astro and Next.js, and 3 years in IT support and helpdesk — plus hands-on computer vision work with YOLO.",
-        vi: "Tôi là lập trình viên có kinh nghiệm ở nhiều lĩnh vực kỹ thuật: 3 năm phát triển ứng dụng VR, AR, MR bằng Unity và C#, phát triển web full-stack với Astro và Next.js, 3 năm hỗ trợ IT và helpdesk — cùng kinh nghiệm thực tế về thị giác máy tính với YOLO.",
+        en: "I'm a software developer with nearly three years of experience in C# and web development, plus three years in IT support. I build applications, develop full-stack websites with Astro, JavaScript, and Tailwind CSS, and enjoy solving technical problems.",
+        vi: "Tôi là lập trình viên phần mềm với gần ba năm kinh nghiệm về C# và phát triển web, cùng ba năm hỗ trợ IT. Tôi xây dựng ứng dụng, phát triển website full-stack với Astro, JavaScript và Tailwind CSS, và thích giải quyết các vấn đề kỹ thuật.",
       },
       {
         en: "At OneTech Asia I built XR apps for client projects — from Meta Quest training sims to HoloLens 2 tools and AR apps on the App Store and Google Play — working with 3D environments, LiDAR data visualization, and 2D/3D assets in Blender and Photoshop.",
         vi: "Tại OneTech Asia, tôi phát triển ứng dụng XR cho khách hàng — từ mô phỏng đào tạo trên Meta Quest, công cụ trên HoloLens 2 đến ứng dụng AR trên App Store và Google Play — làm việc với môi trường 3D, trực quan hóa dữ liệu LiDAR và asset 2D/3D bằng Blender và Photoshop.",
       },
       {
-        en: "I'm a fast, self-directed learner with a logical, problem-solving approach. Games are my passion, so I'm always trying to make something new and interesting — and years of IT support keep me calm and methodical when something breaks.",
-        vi: "Tôi tự học nhanh, chủ động, tư duy logic và giỏi giải quyết vấn đề. Game là niềm đam mê nên tôi luôn cố gắng tạo ra điều gì đó mới và thú vị — và nhiều năm hỗ trợ IT giúp tôi bình tĩnh, có phương pháp khi gặp sự cố.",
+        en: "I'm a fast learner who works independently and adapts quickly to new technologies, using Git/GitHub and AI-assisted tools like Claude and Codex in my workflow — and years of IT support keep me calm and methodical when something breaks.",
+        vi: "Tôi học nhanh, làm việc độc lập và thích nghi nhanh với công nghệ mới, sử dụng Git/GitHub cùng các công cụ AI như Claude và Codex trong quy trình làm việc — và nhiều năm hỗ trợ IT giúp tôi bình tĩnh, có phương pháp khi gặp sự cố.",
       },
     ],
     motto: {
@@ -44,13 +44,13 @@ window.CONTENT = {
       { label: { en: "Based in", vi: "Nơi ở" }, value: { en: "Ho Chi Minh City, Vietnam", vi: "TP. Hồ Chí Minh, Việt Nam" } },
       {
         label: { en: "Experience", vi: "Kinh nghiệm" },
-        value: { en: "Unity 3 yrs · IT support 3 yrs · Web 1 yr", vi: "Unity 3 năm · Hỗ trợ IT 3 năm · Web 1 năm" },
+        value: { en: "C# & Web ~3 yrs · IT support 3 yrs", vi: "C# & Web gần 3 năm · Hỗ trợ IT 3 năm" },
       },
       {
         label: { en: "Education", vi: "Học vấn" },
         value: [
-          { en: "Software Engineering Diploma (ADSE), FPT Aptech", vi: "Bằng Kỹ sư phần mềm (ADSE), FPT Aptech" },
-          { en: "Bachelor of Accounting, University of Economics HCMC", vi: "Cử nhân Kế toán, Đại học Kinh tế TP.HCM" },
+          { en: "Advanced Diploma in Software Engineering (ADSE), FPT Aptech, 2023", vi: "Bằng Kỹ sư phần mềm nâng cao (ADSE), FPT Aptech, 2023" },
+          { en: "Bachelor of Accounting, University of Economics HCMC, 2020", vi: "Cử nhân Kế toán, Đại học Kinh tế TP.HCM, 2020" },
         ],
       },
       {
@@ -63,7 +63,7 @@ window.CONTENT = {
       vi: "Sẵn sàng cho vị trí lập trình viên và dự án freelance — rất mong nhận được tin từ bạn.",
     },
     email: "jake.nguyentt@gmail.com",
-    resumeUrl: "assets/resume.pdf", // PLACEHOLDER — replace the PDF file
+    resumeUrl: "assets/resume.pdf",
 
     // Contact form: create a free form at https://formspree.io, then paste its
     // ID here (the part after /f/, e.g. "xyzabcd"). Empty = form hidden.
@@ -83,6 +83,41 @@ window.CONTENT = {
   //        If omitted and links.video is a YouTube URL, its thumbnail is used.
   // links: any of demo / android / ios / video / live / repo — missing ones are hidden
   projects: [
+    {
+      title: "What The Pho Canberra",
+      category: "web",
+      platform: { en: "Web · Restaurant site", vi: "Web · Website nhà hàng" },
+      image: "assets/img/whatthepho.jpg",
+      blurb: {
+        en: "Website for a Vietnamese restaurant with three Canberra locations: menu, online ordering, catering packages, and directions to each venue.",
+        vi: "Website cho nhà hàng Việt với ba chi nhánh tại Canberra: thực đơn, đặt món online, gói catering và chỉ đường đến từng cửa hàng.",
+      },
+      tags: ["Astro", "JavaScript", "Tailwind CSS", "Square online ordering", "Google Maps", "Responsive"],
+      links: { live: "https://whatthepho.com.au/" },
+    },
+    {
+      title: "oToolRun",
+      category: "web",
+      platform: { en: "Web · Utility platform", vi: "Web · Nền tảng công cụ" },
+      image: "assets/img/otoolrun.jpg",
+      blurb: {
+        en: "130+ free browser tools across 11 categories, from word counters and QR codes to JSON formatting. Everything runs locally in the browser, with no sign-up and no uploads.",
+        vi: "Hơn 130 công cụ miễn phí trong 11 danh mục, từ đếm từ, tạo mã QR đến định dạng JSON. Mọi thứ chạy ngay trên trình duyệt, không cần đăng ký, không tải dữ liệu lên.",
+      },
+      tags: ["JavaScript", "Client-side processing", "Privacy-first", "CDN"],
+      links: { live: "https://otoolrun.com/" },
+    },
+    {
+      title: { en: "This Portfolio", vi: "Portfolio này" },
+      category: "web",
+      image: "assets/img/portfolio.jpg",
+      blurb: {
+        en: "Bilingual, light/dark themed portfolio in plain HTML, CSS, and JavaScript. No build step, deployed on GitHub Pages.",
+        vi: "Portfolio song ngữ, giao diện sáng/tối, viết bằng HTML, CSS và JavaScript thuần. Không cần build, triển khai trên GitHub Pages.",
+      },
+      tags: ["HTML", "CSS", "JavaScript", "i18n"],
+      links: { repo: "https://github.com/JakeNguyenTT/jakenguyentt.github.io" },
+    },
     {
       title: "Akooland",
       category: "xr",
@@ -194,45 +229,15 @@ window.CONTENT = {
       tags: ["Top-down camera", "Roguelike", "Enemy AI"],
       links: { repo: "https://github.com/JakeNguyenTT/ZombieSurvivalGame" },
     },
-    {
-      title: "What The Pho Canberra",
-      category: "web",
-      platform: { en: "Web · Restaurant site", vi: "Web · Website nhà hàng" },
-      image: "assets/img/whatthepho.jpg",
-      blurb: {
-        en: "Website for a Vietnamese restaurant with three Canberra locations: menu, online ordering, catering packages, and directions to each venue.",
-        vi: "Website cho nhà hàng Việt với ba chi nhánh tại Canberra: thực đơn, đặt món online, gói catering và chỉ đường đến từng cửa hàng.",
-      },
-      tags: ["Astro", "Square online ordering", "Google Maps", "Responsive"],
-      links: { live: "https://whatthepho.com.au/" },
-    },
-    {
-      title: "oToolRun",
-      category: "web",
-      platform: { en: "Web · Utility platform", vi: "Web · Nền tảng công cụ" },
-      image: "assets/img/otoolrun.jpg",
-      blurb: {
-        en: "130+ free browser tools across 11 categories, from word counters and QR codes to JSON formatting. Everything runs locally in the browser, with no sign-up and no uploads.",
-        vi: "Hơn 130 công cụ miễn phí trong 11 danh mục, từ đếm từ, tạo mã QR đến định dạng JSON. Mọi thứ chạy ngay trên trình duyệt, không cần đăng ký, không tải dữ liệu lên.",
-      },
-      tags: ["JavaScript", "Client-side processing", "Privacy-first", "CDN"],
-      links: { live: "https://otoolrun.com/" },
-    },
-    {
-      title: { en: "This Portfolio", vi: "Portfolio này" },
-      category: "web",
-      image: "assets/img/portfolio.jpg",
-      blurb: {
-        en: "Bilingual, light/dark themed portfolio in plain HTML, CSS, and JavaScript. No build step, deployed on GitHub Pages.",
-        vi: "Portfolio song ngữ, giao diện sáng/tối, viết bằng HTML, CSS và JavaScript thuần. Không cần build, triển khai trên GitHub Pages.",
-      },
-      tags: ["HTML", "CSS", "JavaScript", "i18n"],
-      links: { repo: "https://github.com/JakeNguyenTT/jakenguyentt.github.io" },
-    },
   ],
 
   // icon: "game" | "cube" | "ai" | "web" | "server"
   skills: [
+    {
+      group: "Web",
+      icon: "web",
+      items: ["JavaScript", "TypeScript", "Astro", "Tailwind CSS", "HTML", "CSS", "Responsive design", "Full-stack websites", "Git", "GitHub"],
+    },
     {
       group: "Game & XR Dev",
       icon: "game",
@@ -243,60 +248,65 @@ window.CONTENT = {
       ],
     },
     {
-      group: { en: "3D & Design", vi: "3D & Thiết kế" },
-      icon: "cube",
-      items: ["Blender", "Photoshop", "3D modeling", "Texturing", "Animation", "3D visualization", "UX/UI design"],
+      group: { en: "IT Support", vi: "Hỗ trợ IT" },
+      icon: "server",
+      items: [
+        "Troubleshooting", "Debugging", "Windows", "Microsoft 365", "Word", "Excel", "SAP support",
+        "Hardware", "Printers", "Basic networking", "Ticketing",
+      ],
     },
     {
       group: { en: "AI & Computer Vision", vi: "AI & Thị giác máy tính" },
       icon: "ai",
       items: [
-        "Python", "YOLOv4", "YOLOv7", "YOLOv11n", "Object detection",
-        "Image annotation", "Dataset preparation", "Model training", "Claude", "Codex", "ChatGPT",
+        "Claude", "Codex", "ChatGPT", "AI-assisted coding", "Python", "YOLOv4", "YOLOv7", "YOLOv11n",
+        "Object detection", "Image annotation", "Dataset preparation", "Model training",
       ],
     },
     {
-      group: "Web",
-      icon: "web",
-      items: ["TypeScript", "JavaScript", "Astro", "Next.js", "HTML", "CSS", "Git", "GitHub"],
-    },
-    {
-      group: { en: "IT Support", vi: "Hỗ trợ IT" },
-      icon: "server",
-      items: [
-        "Troubleshooting", "Windows", "Microsoft 365", "Word", "Excel", "SAP support",
-        "Hardware", "Printers", "Basic networking", "Ticketing",
-      ],
+      group: { en: "3D & Design", vi: "3D & Thiết kế" },
+      icon: "cube",
+      items: ["Blender", "Photoshop", "3D modeling", "Texturing", "Animation", "3D visualization", "UX/UI design"],
     },
   ],
 
   // Newest first.
   experience: [
     {
-      role: { en: "Web Developer (Freelance)", vi: "Lập trình viên Web (Freelance)" },
-      org: { en: "Self-employed", vi: "Tự do" },
-      period: { en: "08/2025 — Present", vi: "08/2025 — Nay" },
+      role: { en: "IT Support", vi: "Hỗ trợ IT" },
+      org: "MP Logistics",
+      period: { en: "04/2026 — Present", vi: "04/2026 — Nay" },
       points: [
         {
-          en: "Develop full-stack websites with Astro, Next.js, and TypeScript.",
-          vi: "Phát triển website full-stack với Astro, Next.js và TypeScript.",
+          en: "Provide IT support for about 100 users, handling around 30 support tickets per day.",
+          vi: "Hỗ trợ IT cho khoảng 100 người dùng, xử lý khoảng 30 yêu cầu hỗ trợ mỗi ngày.",
         },
         {
-          en: "Use AI-assisted development tools such as Claude and Codex.",
-          vi: "Sử dụng các công cụ lập trình hỗ trợ bởi AI như Claude và Codex.",
+          en: "Diagnose and resolve Windows, Microsoft Office, printer, hardware, and basic networking issues.",
+          vi: "Chẩn đoán và khắc phục sự cố Windows, Microsoft Office, máy in, phần cứng và mạng cơ bản.",
+        },
+        {
+          en: "Investigate user-reported problems and communicate practical solutions to keep day-to-day operations running.",
+          vi: "Tìm hiểu các vấn đề người dùng báo cáo và đưa ra giải pháp thực tế để duy trì hoạt động hằng ngày.",
         },
       ],
     },
     {
-      role: "IT Helpdesk",
-      org: "MP Logistics",
-      period: { en: "10/2025 — Present", vi: "10/2025 — Nay" },
+      role: { en: "Web Developer (Freelance)", vi: "Lập trình viên Web (Freelance)" },
+      org: { en: "Self-employed", vi: "Tự do" },
+      period: "08/2025 — 03/2026",
       points: [
-        { en: "Provide IT support for about 200 users.", vi: "Hỗ trợ IT cho khoảng 200 người dùng." },
-        { en: "Handle around 40 support tickets per day.", vi: "Xử lý khoảng 40 yêu cầu hỗ trợ mỗi ngày." },
         {
-          en: "Troubleshoot Windows, Office, printer, hardware, and basic network issues.",
-          vi: "Khắc phục sự cố Windows, Office, máy in, phần cứng và mạng cơ bản.",
+          en: "Developed full-stack websites with Astro, JavaScript, and TypeScript, including responsive interfaces and functionality.",
+          vi: "Phát triển website full-stack với Astro, JavaScript và TypeScript, bao gồm giao diện responsive và các chức năng.",
+        },
+        {
+          en: "Used Git/GitHub and AI-assisted tools such as Claude and Codex to support implementation and iterative development.",
+          vi: "Sử dụng Git/GitHub và các công cụ AI như Claude và Codex để hỗ trợ triển khai và phát triển theo vòng lặp.",
+        },
+        {
+          en: "Worked independently across development tasks, applying a structured, problem-solving approach to website functionality.",
+          vi: "Làm việc độc lập trong các công việc phát triển, áp dụng cách tiếp cận có cấu trúc để giải quyết vấn đề về chức năng website.",
         },
       ],
     },
@@ -306,20 +316,12 @@ window.CONTENT = {
       period: "05/2022 — 04/2025",
       points: [
         {
-          en: "Developed VR, AR, and MR applications in Unity and C# for client projects.",
-          vi: "Phát triển ứng dụng VR, AR và MR bằng Unity và C# cho các dự án khách hàng.",
+          en: "Developed interactive VR applications and games using Unity and C#.",
+          vi: "Phát triển ứng dụng VR tương tác và game bằng Unity và C#.",
         },
         {
-          en: "Built 3D environments and interactive features, including LiDAR data visualization.",
-          vi: "Xây dựng môi trường 3D và tính năng tương tác, bao gồm trực quan hóa dữ liệu LiDAR.",
-        },
-        {
-          en: "Used YOLOv4 and YOLOv7 for product detection, and annotated image data to improve model training and recognition accuracy.",
-          vi: "Sử dụng YOLOv4 và YOLOv7 để nhận diện sản phẩm, đồng thời gán nhãn dữ liệu ảnh để nâng cao chất lượng huấn luyện và độ chính xác nhận diện.",
-        },
-        {
-          en: "Created and edited 3D models and textures in Blender and Photoshop, and partnered with QA to find and fix bugs before release.",
-          vi: "Tạo và chỉnh sửa mô hình 3D, texture bằng Blender và Photoshop, phối hợp với QA để phát hiện và sửa lỗi trước khi phát hành.",
+          en: "Implemented 3D environments and interactive features.",
+          vi: "Xây dựng môi trường 3D và các tính năng tương tác.",
         },
       ],
     },
@@ -329,16 +331,16 @@ window.CONTENT = {
       period: "01/2019 — 05/2021",
       points: [
         {
-          en: "Provided first-level SAP and application support for 50 users.",
-          vi: "Hỗ trợ SAP và ứng dụng cấp 1 cho 50 người dùng.",
+          en: "Provided first-level SAP and business application support for about 50 users.",
+          vi: "Hỗ trợ SAP và ứng dụng doanh nghiệp cấp 1 cho khoảng 50 người dùng.",
         },
         {
-          en: "Helped cut support tickets by 50% within 3 months.",
-          vi: "Góp phần giảm 50% số yêu cầu hỗ trợ trong vòng 3 tháng.",
+          en: "Helped reduce support ticket volume by 50% within six months.",
+          vi: "Góp phần giảm 50% số yêu cầu hỗ trợ trong vòng sáu tháng.",
         },
         {
-          en: "Resolved login, access, and common user issues, escalating complex cases.",
-          vi: "Xử lý các vấn đề đăng nhập, phân quyền và lỗi thường gặp, chuyển tiếp các trường hợp phức tạp.",
+          en: "Diagnosed and resolved Windows, Microsoft Office, printer, hardware, and basic networking issues.",
+          vi: "Chẩn đoán và khắc phục sự cố Windows, Microsoft Office, máy in, phần cứng và mạng cơ bản.",
         },
       ],
     },
