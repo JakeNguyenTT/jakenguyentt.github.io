@@ -23,6 +23,10 @@
       '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3.6v16.8a.6.6 0 0 0 .9.52l14.4-8.4a.6.6 0 0 0 0-1.04L5.9 3.08a.6.6 0 0 0-.9.52zM5.3 3.3l9.2 8.7-9.2 8.7"/></svg>',
     ios:
       '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.5zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.07 1.96-.49 2.56-1.21z"/></svg>',
+    prev:
+      '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></svg>',
+    next:
+      '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></svg>',
     game:
       '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".6" fill="currentColor"/><circle cx="18" cy="13.5" r=".6" fill="currentColor"/></g></svg>',
     cube:
@@ -38,6 +42,7 @@
   // Key order is the chip order and the link-button order. Labels live in CONTENT.ui.
   var CATEGORIES = ["all", "web", "xr", "game"];
   var LINK_KEYS = ["demo", "android", "ios", "video", "live", "repo"];
+  var PAGE_SIZE = 6; // two rows of the 3-column desktop grid
 
   var root = document.documentElement;
   var data = window.CONTENT;
@@ -50,6 +55,7 @@
 
   var state = {
     filter: "all",
+    page: 0, // zero-based page of the project grid
     formStatus: "", // ui key under "form", e.g. "success"
     revealNow: false, // true while re-rendering for a language switch
   };
@@ -245,15 +251,70 @@
       ? projects
       : projects.filter(function (p) { return p.category === state.filter; });
 
+    var pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+    state.page = Math.min(state.page, pages - 1);
+
     grid.textContent = "";
+    renderPager(projects, pages);
     if (!list.length) {
       grid.appendChild(el("p", { class: "glass empty-state", text: ui("empty") }));
       return;
     }
-    list.forEach(function (project) {
+    list.slice(state.page * PAGE_SIZE, (state.page + 1) * PAGE_SIZE).forEach(function (project) {
       grid.appendChild(projectCard(project));
     });
     observeReveals(grid);
+  }
+
+  function goToPage(projects, page) {
+    state.page = page;
+    renderProjects(projects);
+    // Keep the new page in view when the pager sits far below the grid's top (e.g. phones).
+    var section = byId("projects");
+    if (section.getBoundingClientRect().top < 0) {
+      section.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  }
+
+  function renderPager(projects, pages) {
+    var pager = byId("projects-pager");
+    pager.textContent = "";
+    pager.hidden = pages < 2;
+    if (pages < 2) return;
+
+    function arrow(key, target, disabled) {
+      var button = el("button", {
+        class: "btn btn-sm btn-ghost pager-arrow",
+        type: "button",
+        icon: key,
+        "aria-label": ui("pager." + key),
+        disabled: disabled,
+      }, [el("span", { class: "pager-label", text: ui("pager." + key) })]);
+      button.addEventListener("click", function () { goToPage(projects, target); });
+      return button;
+    }
+
+    pager.appendChild(arrow("prev", state.page - 1, state.page === 0));
+    for (var i = 0; i < pages; i++) {
+      (function (page) {
+        var current = page === state.page;
+        var chip = el("button", {
+          class: "chip pager-page",
+          type: "button",
+          text: String(page + 1),
+          "aria-label": ui("pager.page") + " " + (page + 1),
+          "aria-pressed": String(current),
+          "aria-current": current ? "page" : null,
+        });
+        chip.addEventListener("click", function () {
+          if (!current) goToPage(projects, page);
+        });
+        pager.appendChild(chip);
+      })(i);
+    }
+    var next = arrow("next", state.page + 1, state.page === pages - 1);
+    next.appendChild(next.firstChild); // icon after the label, pointing onward
+    pager.appendChild(next);
   }
 
   function renderFilters(projects) {
@@ -276,6 +337,7 @@
       chip.addEventListener("click", function () {
         if (state.filter === key) return;
         state.filter = key;
+        state.page = 0;
         syncPressed();
         renderProjects(projects);
       });

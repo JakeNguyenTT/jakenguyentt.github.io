@@ -357,6 +357,7 @@ window.CONTENT = {
       filters: { all: "All", xr: "AR / VR", game: "Games", web: "Web" },
       links: { demo: "Play demo", android: "Google Play", ios: "App Store", video: "Watch video", live: "Live site", repo: "Code" },
       empty: "No projects in this category yet.",
+      pager: { label: "Project pages", prev: "Previous", next: "Next", page: "Page" },
       stats: { total: "Projects", xr: "AR / VR apps", game: "Games", web: "Websites" },
       form: {
         name: "Name", email: "Email", message: "Message", send: "Send message",
@@ -377,6 +378,7 @@ window.CONTENT = {
       filters: { all: "Tất cả", xr: "AR / VR", game: "Game", web: "Web" },
       links: { demo: "Chơi thử", android: "Google Play", ios: "App Store", video: "Xem video", live: "Xem website", repo: "Mã nguồn" },
       empty: "Chưa có dự án trong mục này.",
+      pager: { label: "Trang dự án", prev: "Trước", next: "Tiếp", page: "Trang" },
       stats: { total: "Dự án", xr: "Ứng dụng AR / VR", game: "Game", web: "Website" },
       form: {
         name: "Họ tên", email: "Email", message: "Tin nhắn", send: "Gửi tin nhắn",

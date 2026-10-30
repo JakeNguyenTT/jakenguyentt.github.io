@@ -629,6 +629,25 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 24px;
 }
+/* Exactly 3 columns on desktop so one page (6 projects) is two full rows. */
+@media (min-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+.pager[hidden] { display: none; }
+.pager-page { min-width: 42px; padding-inline: 12px; }
+.pager-arrow:disabled { opacity: 0.4; cursor: default; transform: none; border-color: var(--border); }
+@media (max-width: 480px) {
+  .pager-label { display: none; }
+}
 
 .project-card {
   position: relative;
