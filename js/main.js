@@ -268,12 +268,7 @@
 
   function goToPage(projects, page) {
     state.page = page;
-    renderProjects(projects);
-    // Keep the new page in view when the pager sits far below the grid's top (e.g. phones).
-    var section = byId("projects");
-    if (section.getBoundingClientRect().top < 0) {
-      section.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-    }
+    renderProjects(projects); // scroll position stays where the reader is
   }
 
   function renderPager(projects, pages) {
